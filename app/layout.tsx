@@ -15,6 +15,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://gustosrepo.github.io/manesocietyco"),
   title: "Mane Society & Co | Premium Hair Salon",
   description:
     "Luxury hair salon specializing in cuts, color, balayage, and treatments. Book your appointment today.",
