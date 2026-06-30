@@ -25,7 +25,7 @@ export default function PrivacyPolicy() {
                 Introduction
               </h2>
               <p className="mb-4 leading-relaxed">
-                Mane Society & Co ("we," "us," "our," or "Company") operates the website located at manesocietyco.com and related services. We are committed to protecting your privacy and ensuring you have a positive experience on our website and at our salon.
+                Mane Society & Co (&quot;we,&quot; &quot;us,&quot; &quot;our,&quot; or &quot;Company&quot;) operates the website located at manesocietyco.com and related services. We are committed to protecting your privacy and ensuring you have a positive experience on our website and at our salon.
               </p>
               <p className="leading-relaxed">
                 This Privacy Policy explains what information we collect, how we use it, and what rights you have regarding your personal data. Please read this policy carefully. If you do not agree with our practices, please do not use our services.
@@ -168,7 +168,7 @@ export default function PrivacyPolicy() {
                 11. Policy Changes
               </h2>
               <p className="leading-relaxed">
-                We may update this Privacy Policy from time to time. Changes will be posted on this page with an updated "Last Updated" date. Your continued use of our services constitutes acceptance of the updated policy.
+                We may update this Privacy Policy from time to time. Changes will be posted on this page with an updated &quot;Last Updated&quot; date. Your continued use of our services constitutes acceptance of the updated policy.
               </p>
             </section>
           </div>

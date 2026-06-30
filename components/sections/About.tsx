@@ -26,15 +26,15 @@ export default function About() {
             <div className="space-y-4 text-muted-foreground leading-relaxed">
               <p>
                 Mane Society & Co was built on one belief: that every person
-                deserves to feel extraordinary. We're not just here to style
-                your hair — we're here to help you walk out the door feeling
+                deserves to feel extraordinary. We&apos;re not just here to style
+                your hair — we&apos;re here to help you walk out the door feeling
                 like the best version of yourself.
               </p>
               <p>
                 Our team of dedicated artists brings years of training and a
                 genuine passion for the craft to every single appointment.
-                Whether you're coming in for a simple trim or a full
-                transformation, you'll receive the same level of attention,
+                Whether you&apos;re coming in for a simple trim or a full
+                transformation, you&apos;ll receive the same level of attention,
                 care, and artistry.
               </p>
               <p>

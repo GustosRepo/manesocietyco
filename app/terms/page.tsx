@@ -25,7 +25,7 @@ export default function TermsOfService() {
                 Introduction
               </h2>
               <p className="mb-4 leading-relaxed">
-                Welcome to Mane Society & Co ("Company," "we," "us," or "our"). By accessing our website, booking an appointment, or using our salon services, you agree to be bound by these Terms of Service.
+                Welcome to Mane Society & Co (&quot;Company,&quot; &quot;we,&quot; &quot;us,&quot; or &quot;our&quot;). By accessing our website, booking an appointment, or using our salon services, you agree to be bound by these Terms of Service.
               </p>
               <p className="leading-relaxed">
                 If you do not agree with any part of these terms, please do not use our services. We reserve the right to modify these terms at any time. Your continued use of our services constitutes acceptance of updated terms.
@@ -37,11 +37,11 @@ export default function TermsOfService() {
                 1. Cancellation & No-Show Policy
               </h2>
               <p className="mb-4 leading-relaxed">
-                <strong>IMPORTANT:</strong> Appointments must be cancelled or rescheduled with at least 24 hours notice.
+                <strong>IMPORTANT:</strong> Appointments must be cancelled or rescheduled with at least 24 hours&apos; notice.
               </p>
               <ul className="list-disc list-inside space-y-2 leading-relaxed">
                 <li>
-                  <strong>Cancellations with 24+ hours notice:</strong> No charge
+                  <strong>Cancellations with 24+ hours&apos; notice:</strong> No charge
                 </li>
                 <li>
                   <strong>Cancellations with less than 24 hours notice:</strong> 50% of service fee charged
@@ -103,7 +103,7 @@ export default function TermsOfService() {
               </p>
               <ul className="list-disc list-inside space-y-2 leading-relaxed">
                 <li>Allergic reactions or sensitivities to products</li>
-                <li>Damage to hair resulting from client's previous treatments elsewhere</li>
+                <li>Damage to hair resulting from client&apos;s previous treatments elsewhere</li>
                 <li>Hair breakage or loss due to pre-existing conditions</li>
                 <li>Results that do not match inspiration photos due to hair condition or texture</li>
                 <li>Scalp irritation or burns if client failed to disclose sensitivities</li>
@@ -191,7 +191,7 @@ export default function TermsOfService() {
                 12. Limitation of Liability
               </h2>
               <p className="leading-relaxed">
-                To the maximum extent permitted by law, Mane Society & Co's total liability for any claim arising from these Terms or our services shall not exceed the amount paid for that service. In no event shall we be liable for indirect, incidental, or consequential damages.
+                To the maximum extent permitted by law, Mane Society & Co&apos;s total liability for any claim arising from these Terms or our services shall not exceed the amount paid for that service. In no event shall we be liable for indirect, incidental, or consequential damages.
               </p>
             </section>
 
