@@ -1,5 +1,3 @@
-const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? "/manesocietyco";
-
 export default function imageLoader({
   src,
 }: {
@@ -7,7 +5,6 @@ export default function imageLoader({
   width: number;
   quality?: number;
 }) {
-  // External URLs pass through unchanged
-  if (src.startsWith("http://") || src.startsWith("https://")) return src;
-  return `${basePath}${src}`;
+  // Return src directly for Vercel deployment
+  return src;
 }
