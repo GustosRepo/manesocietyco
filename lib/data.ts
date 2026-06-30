@@ -153,18 +153,6 @@ export const galleryImages = [
     category: "Cuts",
   },
   {
-    id: 4,
-    src: "/images/branding-tools-flatlay.png",
-    alt: "Mane Society tools and branding",
-    category: "All",
-  },
-  {
-    id: 5,
-    src: "/images/branding-coffee-flatlay.png",
-    alt: "Mane Society branded merch",
-    category: "All",
-  },
-  {
     id: 6,
     src: "/images/gallery-01.jpg",
     alt: "Hair color result at Mane Society",
