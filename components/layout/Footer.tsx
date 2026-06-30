@@ -88,8 +88,22 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="mt-12 pt-8 border-t border-white/10 text-center text-xs text-white/30">
-          © {new Date().getFullYear()} Mane Society & Co. All rights reserved.
+        <div className="mt-12 pt-8 border-t border-white/10">
+          <div className="text-center text-xs text-white/30 mb-4">
+            © {new Date().getFullYear()} Mane Society & Co. All rights reserved.
+          </div>
+          <div className="text-center text-xs text-white/40">
+            Made by{" "}
+            <a
+              href="https://www.code-werx.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-[var(--gold)] hover:text-white transition-colors"
+            >
+              codewerx
+            </a>
+            {" "}<span className="text-[var(--gold)]">&lt;3</span>
+          </div>
         </div>
       </div>
     </footer>
