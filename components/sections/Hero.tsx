@@ -7,10 +7,10 @@ import { ChevronDown } from "lucide-react";
 
 export default function Hero() {
   return (
-    <section className="relative h-screen min-h-[600px] flex items-center justify-center overflow-hidden">
+    <section className="relative h-screen min-h-[600px] flex items-start justify-center overflow-hidden pt-32">
       {/* Background image */}
       <Image
-        src="/images/branding-tools-flatlay.png"
+        src="/images/hero.jpg"
         alt="Mane Society & Co"
         fill
         priority
