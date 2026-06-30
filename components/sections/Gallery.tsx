@@ -3,19 +3,15 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
-import { X } from "lucide-react";
+import { X, ChevronLeft, ChevronRight } from "lucide-react";
 import { galleryImages } from "@/lib/data";
 
-const categories = ["All", "Cuts"];
-
 export default function Gallery() {
-  const [activeCategory, setActiveCategory] = useState("All");
+  const [currentIndex, setCurrentIndex] = useState(0);
   const [lightboxImage, setLightboxImage] = useState<(typeof galleryImages)[0] | null>(null);
 
-  const filtered =
-    activeCategory === "All"
-      ? galleryImages
-      : galleryImages.filter((img) => img.category === activeCategory);
+  const next = () => setCurrentIndex((currentIndex + 1) % galleryImages.length);
+  const prev = () => setCurrentIndex((currentIndex - 1 + galleryImages.length) % galleryImages.length);
 
   return (
     <section id="gallery" className="py-24 lg:py-32 bg-white">
@@ -36,48 +32,79 @@ export default function Gallery() {
           </h2>
         </motion.div>
 
-        {/* Category Filters */}
-        <div className="flex justify-center gap-2 mb-10 flex-wrap">
-          {categories.map((cat) => (
-            <button
-              key={cat}
-              onClick={() => setActiveCategory(cat)}
-              className={`px-5 py-2 text-xs tracking-widest uppercase border transition-all duration-200 ${
-                activeCategory === cat
-                  ? "bg-[var(--charcoal)] border-[var(--charcoal)] text-white"
-                  : "border-[var(--border)] text-[var(--charcoal)] hover:border-[var(--charcoal)]"
-              }`}
-            >
-              {cat}
-            </button>
-          ))}
-        </div>
-
-        {/* Grid */}
-        <motion.div layout className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3">
-          <AnimatePresence mode="popLayout">
-            {filtered.map((img) => (
+        {/* Carousel */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.7 }}
+          className="relative"
+        >
+          <div className="relative aspect-[3/2] md:aspect-[16/9] w-full overflow-hidden rounded-lg bg-[var(--cream)]">
+            <AnimatePresence mode="wait">
               <motion.div
+                key={currentIndex}
+                initial={{ opacity: 0, x: 100 }}
+                animate={{ opacity: 1, x: 0 }}
+                exit={{ opacity: 0, x: -100 }}
+                transition={{ duration: 0.5 }}
+                className="relative w-full h-full cursor-pointer"
+                onClick={() => setLightboxImage(galleryImages[currentIndex])}
+              >
+                <Image
+                  src={galleryImages[currentIndex].src}
+                  alt={galleryImages[currentIndex].alt}
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 768px) 100vw, (max-width: 1024px) 85vw, 960px"
+                  priority
+                />
+              </motion.div>
+            </AnimatePresence>
+
+            {/* Navigation Buttons */}
+            <button
+              onClick={prev}
+              className="absolute left-4 top-1/2 -translate-y-1/2 z-10 bg-white/80 hover:bg-white p-2 rounded-full transition-all duration-200"
+              aria-label="Previous image"
+            >
+              <ChevronLeft size={24} className="text-[var(--charcoal)]" />
+            </button>
+            <button
+              onClick={next}
+              className="absolute right-4 top-1/2 -translate-y-1/2 z-10 bg-white/80 hover:bg-white p-2 rounded-full transition-all duration-200"
+              aria-label="Next image"
+            >
+              <ChevronRight size={24} className="text-[var(--charcoal)]" />
+            </button>
+
+            {/* Image Counter */}
+            <div className="absolute bottom-4 right-4 bg-black/60 text-white px-3 py-1 rounded text-sm">
+              {currentIndex + 1} / {galleryImages.length}
+            </div>
+          </div>
+
+          {/* Thumbnails */}
+          <div className="mt-6 flex gap-2 overflow-x-auto pb-2 justify-start">
+            {galleryImages.map((img, idx) => (
+              <motion.button
                 key={img.id}
-                layout
-                initial={{ opacity: 0, scale: 0.95 }}
-                animate={{ opacity: 1, scale: 1 }}
-                exit={{ opacity: 0, scale: 0.95 }}
-                transition={{ duration: 0.3 }}
-                className="relative aspect-square cursor-pointer overflow-hidden group"
-                onClick={() => setLightboxImage(img)}
+                onClick={() => setCurrentIndex(idx)}
+                className={`relative flex-shrink-0 w-16 h-16 rounded overflow-hidden transition-all duration-200 ${
+                  idx === currentIndex ? "ring-2 ring-[var(--gold)]" : "opacity-60 hover:opacity-100"
+                }`}
+                whileHover={{ scale: 1.05 }}
               >
                 <Image
                   src={img.src}
                   alt={img.alt}
                   fill
-                  className="object-cover group-hover:scale-105 transition-transform duration-500"
-                  sizes="(max-width: 768px) 50vw, (max-width: 1024px) 33vw, 25vw"
+                  className="object-cover"
+                  sizes="64px"
                 />
-                <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-300" />
-              </motion.div>
+              </motion.button>
             ))}
-          </AnimatePresence>
+          </div>
         </motion.div>
       </div>
 

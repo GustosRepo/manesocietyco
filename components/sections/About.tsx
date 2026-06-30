@@ -71,8 +71,8 @@ export default function About() {
             className="relative aspect-[4/5] w-full"
           >
             <Image
-              src="/images/stylist-chair-side.jpg"
-              alt="Mane Society stylist at work"
+              src="/images/bothowners.jpg"
+              alt="Mane Society & Co owners"
               fill
               className="object-cover"
               sizes="(max-width: 1024px) 100vw, 50vw"

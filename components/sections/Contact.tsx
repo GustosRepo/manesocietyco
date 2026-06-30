@@ -27,7 +27,6 @@ type FormValues = {
   email: string;
   phone: string;
   service: string;
-  message: string;
 };
 
 const services = [
@@ -88,9 +87,11 @@ export default function Contact() {
                   <p className="font-[family-name:var(--font-heading)] text-2xl text-[var(--charcoal)] mb-3">
                     Thank you!
                   </p>
+                  <p className="text-muted-foreground text-sm mb-2">
+                    We&apos;ve received your info.
+                  </p>
                   <p className="text-muted-foreground text-sm">
-                    We&apos;ll be in touch within 24 hours to confirm your
-                    appointment.
+                    Each stylist handles their own bookings — visit their booking link from our team page!
                   </p>
                 </div>
               </div>
@@ -177,24 +178,12 @@ export default function Contact() {
                   </div>
                 </div>
 
-                {/* Message */}
-                <div>
-                  <label className="block text-xs tracking-widest uppercase text-[var(--charcoal)] mb-2">
-                    Message
-                  </label>
-                  <textarea
-                    {...register("message")}
-                    rows={5}
-                    className="w-full border border-[var(--border)] bg-transparent px-4 py-3 text-sm focus:outline-none focus:border-[var(--gold)] transition-colors resize-none"
-                  />
-                </div>
-
                 <button
                   type="submit"
                   disabled={isSubmitting}
                   className="w-full py-4 bg-[var(--charcoal)] text-white text-sm tracking-widest uppercase hover:bg-[var(--gold)] transition-colors duration-300 disabled:opacity-60"
                 >
-                  {isSubmitting ? "Sending..." : "Send Message"}
+                  {isSubmitting ? "Submitting..." : "Get In Touch"}
                 </button>
               </form>
             )}
@@ -221,12 +210,23 @@ export default function Contact() {
                   label: "Phone",
                   value: "(361) 555-0192",
                 },
-                {
-                  Icon: Mail,
+                {  Icon: Mail,
                   label: "Email",
                   value: "hello@manesociety.co",
                 },
-              ].map(({ Icon, label, value }) => (
+                {
+                  Icon: () => (
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                      <rect width="20" height="20" x="2" y="2" rx="5" ry="5" />
+                      <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+                      <line x1="17.5" x2="17.51" y1="6.5" y2="6.5" />
+                    </svg>
+                  ),
+                  label: "Instagram",
+                  value: "@manesociety.saloncc",
+                  href: "https://www.instagram.com/manesociety.saloncc/",
+                },
+              ].map(({ Icon, label, value, href }) => (
                 <div key={label} className="flex gap-4">
                   <Icon
                     size={18}
@@ -236,7 +236,13 @@ export default function Contact() {
                     <p className="text-xs tracking-widest uppercase text-[var(--charcoal)] mb-0.5">
                       {label}
                     </p>
-                    <p className="text-sm text-muted-foreground">{value}</p>
+                    {href ? (
+                      <a href={href} target="_blank" rel="noopener noreferrer" className="text-sm text-muted-foreground hover:text-[var(--gold)] transition-colors">
+                        {value}
+                      </a>
+                    ) : (
+                      <p className="text-sm text-muted-foreground">{value}</p>
+                    )}
                   </div>
                 </div>
               ))}

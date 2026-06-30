@@ -13,6 +13,16 @@ function InstagramIcon({ size = 13 }: { size?: number }) {
 }
 import { team } from "@/lib/data";
 
+type TeamMember = {
+  id: number;
+  name: string;
+  title: string;
+  specialties: string[];
+  instagram: string;
+  bookingUrl: string;
+  image: string;
+};
+
 export default function Team() {
   return (
     <section id="team" className="py-24 lg:py-32 bg-white">
@@ -35,7 +45,7 @@ export default function Team() {
 
         {/* Cards */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-          {team.map((member, i) => (
+          {team.map((member: TeamMember, i) => (
             <motion.div
               key={member.id}
               initial={{ opacity: 0, y: 30 }}
@@ -71,13 +81,25 @@ export default function Team() {
                   </li>
                 ))}
               </ul>
-              <a
-                href="#"
-                className="inline-flex items-center gap-1.5 text-xs text-muted-foreground hover:text-[var(--gold)] transition-colors"
-              >
-                <InstagramIcon size={13} />
-                {member.instagram}
-              </a>
+              <div className="flex flex-col gap-3">
+                <a
+                  href={member.instagram.startsWith("@") ? `https://instagram.com/${member.instagram.slice(1)}` : member.instagram}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center gap-1.5 text-xs text-muted-foreground hover:text-[var(--gold)] transition-colors"
+                >
+                  <InstagramIcon size={13} />
+                  {member.instagram}
+                </a>
+                <a
+                  href={member.bookingUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-block px-4 py-2 bg-[var(--gold)] text-[var(--charcoal)] text-xs font-medium rounded hover:bg-[var(--gold)]/90 transition-colors"
+                >
+                  Book with {member.name.split(" ")[0]}
+                </a>
+              </div>
             </motion.div>
           ))}
         </div>

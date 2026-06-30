@@ -61,7 +61,9 @@ export default function Footer() {
             </p>
             <div className="flex gap-4 mb-8">
               <a
-                href="#"
+                href="https://www.instagram.com/manesociety.saloncc/"
+                target="_blank"
+                rel="noopener noreferrer"
                 aria-label="Instagram"
                 className="hover:text-[var(--gold)] transition-colors"
               >
@@ -76,10 +78,10 @@ export default function Footer() {
               </a>
             </div>
             <div className="flex gap-4 text-xs text-white/40">
-              <Link href="#" className="hover:text-white/70 transition-colors">
+              <Link href="/privacy" className="hover:text-white/70 transition-colors">
                 Privacy Policy
               </Link>
-              <Link href="#" className="hover:text-white/70 transition-colors">
+              <Link href="/terms" className="hover:text-white/70 transition-colors">
                 Terms of Service
               </Link>
             </div>
