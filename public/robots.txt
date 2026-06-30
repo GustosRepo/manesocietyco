@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /manesocietyco/
+
+# Disallow admin and private areas (none in this case)
+
+# Sitemap
+Sitemap: https://gustosrepo.github.io/manesocietyco/sitemap.xml

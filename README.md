@@ -1,7 +1,8 @@
 # Mane Society & Co
 
-Premium luxury hair salon website built with Next.js, TypeScript, and Tailwind CSS.
+Premium luxury hair salon in **Corpus Christi, Texas**. Specializing in cuts, color, balayage, keratin treatments, and extensions.
 
+**Location:** 5922 Yorktown Blvd Ste 110, Corpus Christi, TX 78414  
 **Live Site:** https://gustosrepo.github.io/manesocietyco/
 
 ## Features
