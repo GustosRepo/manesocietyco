@@ -45,6 +45,10 @@ export const metadata: Metadata = {
     email: true,
     address: true,
   },
+  icons: {
+    icon: "/favicon.ico",
+    apple: "/apple-touch-icon.png",
+  },
   openGraph: {
     title: "Mane Society & Co | Hair Salon Corpus Christi, TX",
     description: "Premium hair services in Corpus Christi. Book your appointment today.",
