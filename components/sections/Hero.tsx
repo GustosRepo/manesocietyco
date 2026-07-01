@@ -65,10 +65,10 @@ export default function Hero() {
             Book an Appointment
           </Link>
           <Link
-            href="#services"
+            href="#team"
             className="px-10 py-3.5 bg-transparent text-white text-xs tracking-[0.3em] uppercase border border-white/40 hover:border-white transition-colors duration-300"
           >
-            View Services
+            Meet the Team
           </Link>
         </motion.div>
       </div>

@@ -91,42 +91,42 @@ export const team = [
 export const testimonials = [
   {
     id: 1,
-    name: "Camille Torres",
+    name: "Mane Society & Co Client",
     service: "Balayage",
     rating: 5,
-    text: "I've been to a lot of salons and Mane Society is on another level. Sofia understood exactly what I wanted and the result was even better than the inspiration photos. I get compliments every single day.",
+    text: "I've been to a lot of salons and Mane Society & Co is on another level. The team understood exactly what I wanted and the result was even better than my inspiration photos. I get compliments every single day.",
   },
   {
     id: 2,
-    name: "Rachel Kim",
+    name: "Mane Society & Co Client",
     service: "Keratin Treatment",
     rating: 5,
     text: "My hair has never felt this smooth. The keratin treatment was done so carefully — they really took their time. The salon itself is gorgeous and everyone is so welcoming.",
   },
   {
     id: 3,
-    name: "Priya Nair",
+    name: "Mane Society & Co Client",
     service: "Extensions",
     rating: 5,
-    text: "Isabelle installed my extensions and they are absolutely undetectable. The length and volume I've always wanted. I walked out feeling like a completely different person — in the best way.",
+    text: "My extensions are absolutely undetectable. I got the length and volume I've always wanted, and I walked out feeling like a completely different person in the best way.",
   },
   {
     id: 4,
-    name: "Jordan Ellis",
+    name: "Mane Society & Co Client",
     service: "Signature Haircut",
     rating: 5,
-    text: "Marcus gave me the best cut I've had in years. He really listened to what I wanted and also gave honest advice about what would work with my hair type. Will not go anywhere else.",
+    text: "This is the best haircut I've had in years. They really listened to what I wanted and gave honest advice about what works with my hair type. I will not go anywhere else.",
   },
   {
     id: 5,
-    name: "Natalie Osei",
+    name: "Mane Society & Co Client",
     service: "Full Color",
     rating: 5,
-    text: "I was nervous about going darker but Devon completely put me at ease. The color is rich, glossy, and exactly what I envisioned. The whole experience felt like self-care at its finest.",
+    text: "I was nervous about going darker, but Mane Society & Co completely put me at ease. The color is rich, glossy, and exactly what I envisioned. The whole experience felt like self-care at its finest.",
   },
   {
     id: 6,
-    name: "Maya Patel",
+    name: "Mane Society & Co Client",
     service: "Highlights",
     rating: 5,
     text: "Such a beautiful salon with an even more talented team. My highlights came out perfectly blended — soft, warm, and so natural looking. The scalp massage during the wash was a bonus!",
@@ -203,7 +203,6 @@ export const galleryImages = [
 ];
 
 export const navLinks = [
-  { label: "Services", href: "#services" },
   { label: "Gallery", href: "#gallery" },
   { label: "About", href: "#about" },
   { label: "Team", href: "#team" },
